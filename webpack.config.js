@@ -30,6 +30,17 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/.[name][ext]",
+        },
+      },
+      {
+        test: /\.html$/,
+        loader: "html-loader",
+      },
     ],
   },
 
